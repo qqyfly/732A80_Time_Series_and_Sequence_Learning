@@ -36,7 +36,7 @@ def acfplot(x, lags=None, conf=0.95):
     plt.plot(lag_vec,c*np.ones(lags),'k--',linewidth=1, label=f"{100*conf}% confidence")
     plt.plot(lag_vec,-c*np.ones(lags),'k--',linewidth=1)
     
-    plt.stem(lag_vec, y, linefmt='-', markerfmt=' ', basefmt="k ", use_line_collection=True, label="Empirical ACF")
+    plt.stem(lag_vec, y, linefmt='-', markerfmt=' ', basefmt="k ", label="Empirical ACF")
     plt.plot(lag_vec, 0*lag_vec, 'k-')
     plt.title(f"Empirical ACF")
     plt.legend() 
